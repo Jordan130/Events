@@ -8,7 +8,8 @@ public class Main {
 	 * @param args does nothing
 	 */
 	public static void main(String[] args) {
-		// Example: Creating a WeeklyEvent
+		
+	// Example: Creating a WeeklyEvent
         String eventName = "Workout";
         LocalDate firstOccurrence = LocalDate.of(2024, 1, 1); // Set the initial date
         int repetitions = 52; // Repeat the event for 5 weeks
@@ -60,5 +61,4 @@ public class Main {
         // Created One Time Event:
         // Interview (03:00-04:00) on 2024-01-04
 	}
-	
 }
