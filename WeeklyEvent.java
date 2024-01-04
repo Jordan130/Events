@@ -22,6 +22,12 @@ public class WeeklyEvent extends RepeatingEvent {
 		super(eventName, firstOccurrence, repetitions, startTime, endTime);
 	}
 
+	/**
+	 * Determines wether or not the event occurs on a given day.
+	 * 
+	 * @param when The day it might occur on.
+	 * @return     True if the event occurs on that day, or false otherwise.
+	 */
 	@Override
 	public boolean isOnDay(LocalDate when) {
 		if (super.getRepetitions() != 0) {
