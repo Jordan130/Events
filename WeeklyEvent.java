@@ -17,8 +17,7 @@ public class WeeklyEvent extends RepeatingEvent {
 	 * @param startTime       The time the event starts
 	 * @param endTime         The time the event ends
 	 */
-	public WeeklyEvent(String eventName, LocalDate firstOccurrence, int repetitions, LocalTime startTime,
-			LocalTime endTime) {
+	public WeeklyEvent(String eventName, LocalDate firstOccurrence, int repetitions, LocalTime startTime, LocalTime endTime) {
 		super(eventName, firstOccurrence, repetitions, startTime, endTime);
 	}
 
