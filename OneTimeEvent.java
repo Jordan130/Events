@@ -33,11 +33,13 @@ public class OneTimeEvent extends Event {
 		}
 	}
 
+	// Returns a String representaion of this object.
 	@Override
 	public String toString() {
 		return super.toString() + "on " + date;
 	}
 
+	// Compares two objects for equality.
 	@Override
 	public boolean equals(Object obj) {
 		if (!super.equals(obj)) {
@@ -52,6 +54,7 @@ public class OneTimeEvent extends Event {
 		}
 	}
 
+	// Returns a hashcode value that represents this object.
 	@Override
 	public int hashCode() {
 		return super.hashCode() + 1000 * date.hashCode();
