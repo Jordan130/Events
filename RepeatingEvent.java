@@ -20,8 +20,7 @@ public abstract class RepeatingEvent extends Event {
 	 * @param startTime       What time the event starts
 	 * @param endTime         What time the event ends
 	 */
-	public RepeatingEvent(String eventName, LocalDate firstOccurrence, int repetitions, LocalTime startTime,
-			LocalTime endTime) {
+	public RepeatingEvent(String eventName, LocalDate firstOccurrence, int repetitions, LocalTime startTime, LocalTime endTime) {
 		super(eventName, startTime, endTime);
 		this.firstOccurrence = firstOccurrence;
 		this.repetitions = repetitions;
@@ -83,5 +82,4 @@ public abstract class RepeatingEvent extends Event {
 	public int hashCode() {
 		return super.hashCode() + 1000 * repetitions + 10000 * firstOccurrence.hashCode();
 	}
-
 }
