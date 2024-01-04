@@ -12,7 +12,7 @@ public class Main {
 	// Example: Creating a WeeklyEvent
         String eventName = "Workout";
         LocalDate firstOccurrence = LocalDate.of(2024, 1, 1); // Set the initial date
-        int repetitions = 52; // Repeat the event for 5 weeks
+        int repetitions = 52; // Repeat the event for 52 weeks
         LocalTime startTime = LocalTime.of(7, 0); // Set the start time (7:00)
         LocalTime endTime = LocalTime.of(8, 0); // Set the end time (8:00)
 
@@ -27,7 +27,7 @@ public class Main {
         // Example: Creating a MonthlyEvent
         String eventName2 = "Haircut";
         LocalDate firstOccurrence2 = LocalDate.of(2024, 1, 15); // Set the initial date
-        int repetitions2 = 12; // Repeat the event for 5 months
+        int repetitions2 = 12; // Repeat the event for 12 months
         LocalTime startTime2 = LocalTime.of(6, 0); // Set the start time
         LocalTime endTime2 = LocalTime.of(6, 20); // Set the end time
 
