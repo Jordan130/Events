@@ -106,6 +106,4 @@ public abstract class Event {
 	public int hashCode() {
 		return 1 * eventName.hashCode() + 10 * startTime.hashCode() + 100 * endTime.hashCode();
 	}
-	
-	
 }
