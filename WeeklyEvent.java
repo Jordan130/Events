@@ -51,6 +51,7 @@ public class WeeklyEvent extends RepeatingEvent {
 
 	}
 
+	// Returns a String representaion of this object.
 	@Override
 	public String toString() {
 		if (super.getRepetitions() == 0) {
