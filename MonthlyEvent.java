@@ -48,7 +48,6 @@ public class MonthlyEvent extends RepeatingEvent {
 				return true;
 			}
 		}
-
 	}
 
 	// Returns a String representaion of this object.
