@@ -30,24 +30,30 @@ public class WeeklyEvent extends RepeatingEvent {
 	 */
 	@Override
 	public boolean isOnDay(LocalDate when) {
+		// Check if the event has repetitions.
 		if (super.getRepetitions() != 0) {
+			// Check if the days of the week match.
 			if (super.getFirstOccurrence().getDayOfWeek() != when.getDayOfWeek()) {
 				return false;
 			}
+			// Check if the provided date is before the initial occurance.
 			if (when.isBefore(super.getFirstOccurrence())) {
 				return false;
 			}
+			// Check if the provided date is after the last occurance (initial occurance + repetitions).
 			if (when.isAfter(super.getFirstOccurrence().plusWeeks(getRepetitions()))) {
 				return false;
 			} else {
 				return true;
 			}
 		}
-
+		// If the event does not have repetitions.
 		else {
+			// Check if the days of the week match.
 			if (super.getFirstOccurrence().getDayOfWeek() != when.getDayOfWeek()) {
 				return false;
 			}
+			// Check if the provided date is before the initial occurance.
 			if (when.isBefore(super.getFirstOccurrence())) {
 				return false;
 			} else {
