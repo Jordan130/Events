@@ -17,8 +17,7 @@ public class MonthlyEvent extends RepeatingEvent {
 	 * @param startTime       The time the event starts
 	 * @param endTime         The time the event ends
 	 */
-	public MonthlyEvent(String eventName, LocalDate firstOccurrence, int repetitions, LocalTime startTime,
-			LocalTime endTime) {
+	public MonthlyEvent(String eventName, LocalDate firstOccurrence, int repetitions, LocalTime startTime, LocalTime endTime) {
 		super(eventName, firstOccurrence, repetitions, startTime, endTime);
 	}
 
@@ -30,24 +29,30 @@ public class MonthlyEvent extends RepeatingEvent {
 	 */
 	@Override
 	public boolean isOnDay(LocalDate when) {
+		// Check if the event has repetitions.
 		if (super.getRepetitions() != 0) {
+			// Check if the days of the month match.
 			if (super.getFirstOccurrence().getDayOfMonth() != when.getDayOfMonth()) {
 				return false;
 			}
+			// Check if the provided date is before the intial occurance.
 			if (when.isBefore(super.getFirstOccurrence())) {
 				return false;
 			}
+			// Check if the provided date is after the last occurance (inital occurance + repetitions).
 			if (when.isAfter(super.getFirstOccurrence().plusMonths(getRepetitions()))) {
 				return false;
 			} else {
 				return true;
 			}
 		}
-
+		// If the event does not have repetitions.
 		else {
+			// Check if the days of the month match.
 			if (super.getFirstOccurrence().getDayOfMonth() != when.getDayOfMonth()) {
 				return false;
 			}
+			// Check if the provided date is before the intial occurance.
 			if (when.isBefore(super.getFirstOccurrence())) {
 				return false;
 			} else {
