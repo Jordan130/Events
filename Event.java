@@ -69,12 +69,14 @@ public abstract class Event {
 	 * @return True if the event occurs on that day, or false otherwise.
 	 */
 	public abstract boolean isOnDay(LocalDate when);
-	
+
+	// Returns a String represenation of this object.
 	@Override
 	public String toString() {
 		return eventName + " (" + startTime + "-" + endTime + ") ";
 	}
-	
+
+	// Compares two objects for equality.
 	@Override
 	public boolean equals(Object obj) {
 		boolean result;
@@ -101,7 +103,8 @@ public abstract class Event {
 		}
 		return result;
 	}
-	
+
+	// Returns a hashcode value that respresents this object.
 	@Override
 	public int hashCode() {
 		return 1 * eventName.hashCode() + 10 * startTime.hashCode() + 100 * endTime.hashCode();
