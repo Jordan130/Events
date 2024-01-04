@@ -48,6 +48,7 @@ public abstract class RepeatingEvent extends Event {
 		return firstOccurrence;
 	}
 
+	// Returns a String representaion of this object.
 	@Override
 	public String toString() {
 		if (repetitions == 0) {
@@ -57,6 +58,7 @@ public abstract class RepeatingEvent extends Event {
 		}
 	}
 
+	// Compares two objects for equality.
 	@Override
 	public boolean equals(Object obj) {
 		if (obj == null) {
@@ -76,6 +78,7 @@ public abstract class RepeatingEvent extends Event {
 		}
 	}
 
+	// Returns a hashcode value for this object.
 	@Override
 	public int hashCode() {
 		return super.hashCode() + 1000 * repetitions + 10000 * firstOccurrence.hashCode();
