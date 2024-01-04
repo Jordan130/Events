@@ -48,17 +48,11 @@ public class WeeklyEvent extends RepeatingEvent {
 				return true;
 			}
 		}
-
 	}
 
 	// Returns a String representaion of this object.
 	@Override
 	public String toString() {
-		if (super.getRepetitions() == 0) {
-			return super.toString() + " weeks starting on " + super.getFirstOccurrence();
-		} else {
-			return super.toString() + " weeks starting on " + super.getFirstOccurrence();
-		}
+		return super.toString() + " weeks starting on " + super.getFirstOccurrence();	
 	}
-
 }
