@@ -53,10 +53,6 @@ public class MonthlyEvent extends RepeatingEvent {
 	// Returns a String representaion of this object.
 	@Override
 	public String toString() {
-		if (super.getRepetitions() == 0) {
-			return super.toString() + " months starting on " + super.getFirstOccurrence();
-		} else {
-			return super.toString() + " months starting on " + super.getFirstOccurrence();
-		}
+		return super.toString() + " months starting on " + super.getFirstOccurrence();
 	}
 }
